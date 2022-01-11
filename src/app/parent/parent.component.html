@@ -1,0 +1,45 @@
+
+<h3 style="text-align:center">Child to Parent Component Interaction in Angular</h3>
+
+
+<div class="container">
+<div class="card" style="border-radius: 20px">
+  <div style="background-color: pink; border-radius: 20px">
+    <br />
+    <label><strong>In the below box, message will load automatically from child when it is initialized:</strong> </label>
+    <br />
+    <div>{{msgOnChildCompInit}}</div>
+    <br />
+    <br />
+    <br />
+  </div>
+</div>
+</div>
+
+<div class="line"></div>
+
+<label>In the below box, message will appear when user click on the button from the child component.</label>
+
+
+
+<div class="container">
+<div class="card" style="border-radius: 20px">
+  <div style="background-color: aqua; border-radius: 20px">
+    <br />
+    <h4><b>Child</b></h4>
+    <br />
+    <div>{{msgOnButtonClick}}</div>
+    <br />
+    <br />
+    <br />
+  </div>
+</div>
+</div>
+
+
+<div class="line"></div>
+
+<app-child 
+(childButtonEvent)="receivedMessageHandler($event)"
+(onInitEvent)="receiveAutoMsgHandler($event)"
+><app-child>

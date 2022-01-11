@@ -13,7 +13,7 @@ export class ChildComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.onInitEvent.emit('This meesage is appeared automatically as the child component will intialized. This message is defined in the child component ngOninit method');
+    this.onInitEvent.emit('This message is appeared automatically as the child component will intialized. This message is defined in the child component ngOninit method');
   }
 
   clickHandler() {

@@ -7,16 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  msgOnButtonClick: string;
-  msgOnChildCompInit: String;
 
-  name = 'Angular';
-
-  receivedMessageHandler(p) {
-    this.msgOnButtonClick = p;
-  }
-
-  receiveAutoMsgHandler(p) {
-    this.msgOnChildCompInit = p;
-  }
 }
