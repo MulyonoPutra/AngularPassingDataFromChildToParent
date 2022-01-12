@@ -8,6 +8,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class ChildComponent implements OnInit {
 
   @Output() childButtonEvent = new EventEmitter();
+  @Output() onInitEvent = new EventEmitter();
 
   messages: string = 'This message is appeared automatically as the child component will intialized. This message is defined in the child component ngOninit method';
 
@@ -16,7 +17,7 @@ export class ChildComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    // this.onInitEvent.emit(this.messages);
+    this.onInitEvent.emit(this.messages);
   }
 
   clickHandler() {
