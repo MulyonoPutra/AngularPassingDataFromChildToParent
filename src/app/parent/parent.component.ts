@@ -12,13 +12,13 @@ export class ParentComponent implements OnInit {
   ngOnInit() {
   }
 
-  msgOnButtonClick: string;
+  receivedMessages: string;
   msgOnChildCompInit: String;
 
   name = 'Angular';
 
-  receivedMessageHandler(p) {
-    this.msgOnButtonClick = p;
+  receivedMessageHandler(e) {
+    this.receivedMessages = e;
   }
 
   receiveAutoMsgHandler(p) {
